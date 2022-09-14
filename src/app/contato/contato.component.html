@@ -1,0 +1,20 @@
+<h2 class="contact__title">Entre em contato</h2>
+<section class="contact__container">
+    <form [formGroup]="formContato" class="contact-form">
+        <input formControlName="nome" [class.valid]="formContato.controls['nome'].valid" type="text" placeholder="Digite seu nome" [class.invalid]="formContato.controls['nome'].invalid && formContato.controls['nome'].touched || formContato.controls['nome'].dirty" />
+        
+        <div *ngIf="formContato.controls['nome'].invalid">
+
+        </div>
+
+        <input type="assunto" placeholder="Digite o assunto"/>
+        <input type="tel" placeholder="(00) 0 0000-0000"/>
+        <input type="email" placeholder="Digite seu email">
+        <textarea maxlength="300"></textarea>
+        <button>Enviar</button>
+    </form>
+    <address>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.9219638188274!2d-34.90438940000001!3d-8.1094285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4a271984dd18b44b!2sLe%20Parc%20Boa%20Viagem!5e0!3m2!1spt-BR!2sbr!4v1663122189327!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p>R. Le Parc, 100 - Imbiribeira, Recife - PE, 51160-035</p>
+    </address>
+</section>
